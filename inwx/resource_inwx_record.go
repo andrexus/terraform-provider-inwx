@@ -89,31 +89,15 @@ func resourceINWXRecordCreate(d *schema.ResourceData, meta interface{}) error {
 func resourceINWXRecordRead(d *schema.ResourceData, meta interface{}) error {
 	client := meta.(*goinwx.Client)
 
-	var domain *goinwx.NameserverDomain
-	var rec *goinwx.NameserverRecord
-
-	listResp, err := client.Nameservers.List("")
+	recId, err := strconv.Atoi(d.Id())
 	if err != nil {
-		return fmt.Errorf("Couldn't get list of INWX nameserver domains: %s", err)
+		return fmt.Errorf("Couldn't convert %s to int", d.Id())
 	}
 
-	for _, domainItem := range listResp.Domains {
-		resp, err := client.Nameservers.Info("", domainItem.RoId)
-		if err != nil {
-			return fmt.Errorf("Couldn't get INWX nameserver domain info: %s", err)
-		}
+	rec, domain, err := client.Nameservers.FindRecordById(recId)
 
-		for _, record := range resp.Records {
-			if strconv.Itoa(record.Id) == d.Id() {
-				rec = &record
-				domain = &domainItem
-				break
-			}
-		}
-	}
-
-	if rec == nil {
-		return fmt.Errorf("Couldn't find INWX Record: %s", d.Id())
+	if err != nil {
+		return err
 	}
 
 	d.Set("domain", domain.Domain)
