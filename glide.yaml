@@ -3,8 +3,6 @@ import:
 - package: github.com/andrexus/goinwx
   version: ^0.2.1
 - package: github.com/hashicorp/terraform
-  version: ^0.9.3
+  version: ^0.9.5
   subpackages:
-  - helper/schema
   - plugin
-  - terraform

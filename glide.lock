@@ -1,16 +1,16 @@
-hash: 46e307a3ba7537b9c0f679b4497b5c56b600c1c46564747cfc451dbadf973913
-updated: 2017-04-17T21:16:44.666706624+02:00
+hash: 3440464bcb79e6e2ca5fa0479bc955215515e3e78b98b053e332e6e2f56adb0d
+updated: 2017-05-17T23:27:57.014881581+02:00
 imports:
 - name: github.com/andrexus/goinwx
   version: 45c49f49d966697d423dc6c4ecff0d511e61f4ec
 - name: github.com/andrexus/xmlrpc
   version: 748f22b60198b74de8f11c9c7f11d721b9ba2a4b
 - name: github.com/apparentlymart/go-cidr
-  version: a3ebdb999b831ecb6ab8a226e31b07b2b9061c47
+  version: 7e4b007599d4e2076d9a81be723b3912852dda2c
   subpackages:
   - cidr
 - name: github.com/aws/aws-sdk-go
-  version: 654534755951d5af0bef2b612cf98fe529acdb7b
+  version: fed27f4bd16c8c63d01003b978e5bc85fe727519
   subpackages:
   - aws
   - aws/awserr
@@ -34,33 +34,34 @@ imports:
   - private/protocol/rest
   - private/protocol/restxml
   - private/protocol/xml/xmlutil
-  - private/waiter
   - service/s3
   - service/sts
 - name: github.com/bgentry/go-netrc
   version: 9fd32a8b3d3d3f9d43c341bfe098430e07609480
   subpackages:
   - netrc
+- name: github.com/blang/semver
+  version: 4a1e882c79dcf4ec00d2e29fac74b9c8938d5052
 - name: github.com/fatih/structs
   version: a720dfa8df582c51dee1b36feabb906bde1588bd
 - name: github.com/go-ini/ini
-  version: 2ba15ac2dc9cdf88c110ec2dc0ced7fa45f5678c
+  version: e7fea39b01aea8d5671f6858f0532f56e8bff3a5
 - name: github.com/hashicorp/errwrap
   version: 7554cd9344cec97297fa6649b055a8c98c2a1e55
 - name: github.com/hashicorp/go-getter
-  version: 2fbd997432e72fe36060c8f07ec1eaf98d098177
+  version: 90b6568eac830f62a08e8f1f46375daa63e57015
   subpackages:
   - helper/url
 - name: github.com/hashicorp/go-multierror
-  version: 8484912a3b9987857bac52e0c5fec2b95f419628
+  version: ed905158d87462226a13fe39ddf685ea65f1c11f
 - name: github.com/hashicorp/go-plugin
-  version: 8cf118f7a2f0c7ef1c82f66d4f6ac77c7e27dc12
+  version: b7d6477501c13292d71fd3b8e688269e51b028ba
 - name: github.com/hashicorp/go-uuid
   version: 64130c7a86d732268a38cb04cfbaf0cc987fda98
 - name: github.com/hashicorp/go-version
-  version: e96d3840402619007766590ecea8dd7af1292276
+  version: 03c5bf6be031b6dd45afec16b1cf94fc8938bc77
 - name: github.com/hashicorp/hcl
-  version: 37ab263305aaeb501a60eb16863e808d426e37f2
+  version: 392dba7d905ed5d04a5794ba89f558b27e2ba1ca
   subpackages:
   - hcl/ast
   - hcl/parser
@@ -71,7 +72,7 @@ imports:
   - json/scanner
   - json/token
 - name: github.com/hashicorp/hil
-  version: 543808c44b249df579868afe2cc0692a02bf0478
+  version: fac2259da677551de1fb92b844c4d020a38d8468
   subpackages:
   - ast
   - parser
@@ -79,7 +80,7 @@ imports:
 - name: github.com/hashicorp/logutils
   version: 0dc08b1671f34c4250ce212759ebd880f743d883
 - name: github.com/hashicorp/terraform
-  version: 468b62bbddd0f573aa0ecbe0652d5351f77e5aab
+  version: 144ef8ce4e099e494a3cfe14fc1e0d0bd555b763
   subpackages:
   - config
   - config/module
@@ -90,22 +91,31 @@ imports:
   - helper/hilmapstructure
   - helper/schema
   - helper/shadow
+  - moduledeps
   - plugin
+  - plugin/discovery
   - terraform
 - name: github.com/hashicorp/yamux
   version: d1caa6c97c9fc1cc9e83bbe34d0603f9ff0ce8bd
 - name: github.com/jmespath/go-jmespath
   version: bd40a432e4c76585ef6b72d3fd96fb9b6dc7b68d
 - name: github.com/mitchellh/copystructure
-  version: 5af94aef99f597e6a9e1f6ac6be6ce0f3c96b49d
+  version: f81071c9d77b7931f78c90b416a074ecdc50e959
 - name: github.com/mitchellh/go-homedir
   version: b8bc1bf767474819792c23f32d8286a45736f1c6
+- name: github.com/mitchellh/go-testing-interface
+  version: 477c2d05a845d8b55912a5a7993b9b24abcc5ef8
 - name: github.com/mitchellh/hashstructure
-  version: ab25296c0f51f1022f01cd99dfb45f1775de8799
+  version: 9204ce590301a868e3e86938bc12eadd416b211e
 - name: github.com/mitchellh/mapstructure
-  version: 5a0325d7fafaac12dda6e7fb8bd222ec1b69875e
+  version: cc8532a8e9a55ea36402aa21efdf403a60d34096
 - name: github.com/mitchellh/reflectwalk
-  version: 9ad27c461a633e32a235a061d523aefe8f18571d
+  version: 8d802ff4ae93611b807597f639c19f76074df5c6
 - name: github.com/satori/go.uuid
-  version: b061729afc07e77a8aa4fad0a2fd840958f1942a
+  version: 5bf94b69c6b68ee1b541973bb8e1144db23a194b
+- name: golang.org/x/net
+  version: 513929065c19401a1c7b76ecd942f9f86a0c061b
+  subpackages:
+  - html
+  - html/atom
 testImports: []
