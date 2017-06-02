@@ -1,8 +1,8 @@
-hash: 3440464bcb79e6e2ca5fa0479bc955215515e3e78b98b053e332e6e2f56adb0d
-updated: 2017-05-17T23:27:57.014881581+02:00
+hash: d7f2ea4456d815f356618be70cc9e65b2af3ed96a3297d6b43531a20ab6a694a
+updated: 2017-06-02T22:59:43.190513141+02:00
 imports:
 - name: github.com/andrexus/goinwx
-  version: 45c49f49d966697d423dc6c4ecff0d511e61f4ec
+  version: 98f57772ecc79ebf5d2ab0ff82bfcf050d8be6c0
 - name: github.com/andrexus/xmlrpc
   version: 748f22b60198b74de8f11c9c7f11d721b9ba2a4b
 - name: github.com/apparentlymart/go-cidr
@@ -10,7 +10,7 @@ imports:
   subpackages:
   - cidr
 - name: github.com/aws/aws-sdk-go
-  version: fed27f4bd16c8c63d01003b978e5bc85fe727519
+  version: 4d7eba91c40f1bd38d04fd80131e475c654e8de5
   subpackages:
   - aws
   - aws/awserr
@@ -28,6 +28,7 @@ imports:
   - aws/request
   - aws/session
   - aws/signer/v4
+  - internal/shareddefaults
   - private/protocol
   - private/protocol/query
   - private/protocol/query/queryutil
@@ -40,12 +41,10 @@ imports:
   version: 9fd32a8b3d3d3f9d43c341bfe098430e07609480
   subpackages:
   - netrc
-- name: github.com/blang/semver
-  version: 4a1e882c79dcf4ec00d2e29fac74b9c8938d5052
 - name: github.com/fatih/structs
   version: a720dfa8df582c51dee1b36feabb906bde1588bd
 - name: github.com/go-ini/ini
-  version: e7fea39b01aea8d5671f6858f0532f56e8bff3a5
+  version: d3de07a94d22b4a0972deb4b96d790c2c0ce8333
 - name: github.com/hashicorp/errwrap
   version: 7554cd9344cec97297fa6649b055a8c98c2a1e55
 - name: github.com/hashicorp/go-getter
@@ -80,7 +79,7 @@ imports:
 - name: github.com/hashicorp/logutils
   version: 0dc08b1671f34c4250ce212759ebd880f743d883
 - name: github.com/hashicorp/terraform
-  version: 144ef8ce4e099e494a3cfe14fc1e0d0bd555b763
+  version: fb91140d671bb89c57416242e8cba7e5e6a7363a
   subpackages:
   - config
   - config/module
@@ -91,16 +90,14 @@ imports:
   - helper/hilmapstructure
   - helper/schema
   - helper/shadow
-  - moduledeps
   - plugin
-  - plugin/discovery
   - terraform
 - name: github.com/hashicorp/yamux
   version: d1caa6c97c9fc1cc9e83bbe34d0603f9ff0ce8bd
 - name: github.com/jmespath/go-jmespath
   version: bd40a432e4c76585ef6b72d3fd96fb9b6dc7b68d
 - name: github.com/mitchellh/copystructure
-  version: f81071c9d77b7931f78c90b416a074ecdc50e959
+  version: d23ffcb85de31694d6ccaa23ccb4a03e55c1303f
 - name: github.com/mitchellh/go-homedir
   version: b8bc1bf767474819792c23f32d8286a45736f1c6
 - name: github.com/mitchellh/go-testing-interface
@@ -108,14 +105,14 @@ imports:
 - name: github.com/mitchellh/hashstructure
   version: 9204ce590301a868e3e86938bc12eadd416b211e
 - name: github.com/mitchellh/mapstructure
-  version: cc8532a8e9a55ea36402aa21efdf403a60d34096
+  version: d0303fe809921458f417bcf828397a65db30a7e4
 - name: github.com/mitchellh/reflectwalk
   version: 8d802ff4ae93611b807597f639c19f76074df5c6
 - name: github.com/satori/go.uuid
   version: 5bf94b69c6b68ee1b541973bb8e1144db23a194b
-- name: golang.org/x/net
-  version: 513929065c19401a1c7b76ecd942f9f86a0c061b
+- name: golang.org/x/crypto
+  version: e1a4589e7d3ea14a3352255d04b6f1a418845e5e
   subpackages:
-  - html
-  - html/atom
+  - bcrypt
+  - blowfish
 testImports: []
