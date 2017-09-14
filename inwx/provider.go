@@ -21,7 +21,7 @@ func Provider() terraform.ResourceProvider {
 				DefaultFunc: schema.EnvDefaultFunc("INWX_PASSWORD", nil),
 				Description: "Password for API operations.",
 			},
-			"TAN": &schema.Schema{
+			"tan": &schema.Schema{
 				Type:        schema.TypeString,
 				Optional:    true,
 				DefaultFunc: schema.EnvDefaultFunc("INWX_TAN", nil),
@@ -47,7 +47,7 @@ func providerConfigure(d *schema.ResourceData) (interface{}, error) {
 	config := Config{
 		Username: d.Get("username").(string),
 		Password: d.Get("password").(string),
-		TAN:      d.Get("TAN").(string),
+		TAN:      d.Get("tan").(string),
 		Sandbox:  d.Get("sandbox").(bool),
 	}
 
