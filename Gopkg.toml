@@ -1,0 +1,7 @@
+[[constraint]]
+  name = "github.com/hashicorp/terraform"
+  version = "0.10.4"
+
+[[constraint]]
+  name = "github.com/andrexus/goinwx"
+  version = "0.3.2"

@@ -1,8 +1,0 @@
-package: github.com/andrexus/terraform-provider-inwx
-import:
-- package: github.com/andrexus/goinwx
-  version: ^0.3.0
-- package: github.com/hashicorp/terraform
-  version: ^0.9.5
-  subpackages:
-  - plugin
