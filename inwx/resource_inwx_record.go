@@ -51,6 +51,7 @@ func resourceINWXRecord() *schema.Resource {
 
 			"priority": &schema.Schema{
 				Type:     schema.TypeInt,
+				Optional: true,
 				Computed: true,
 			},
 		},
@@ -68,8 +69,12 @@ func resourceINWXRecordCreate(d *schema.ResourceData, meta interface{}) error {
 		Content: d.Get("value").(string),
 	}
 
-	if ttl, ok := d.GetOk("ttl"); ok {
-		newRecord.Ttl = ttl.(int)
+	if val, ok := d.GetOk("ttl"); ok {
+		newRecord.Ttl = val.(int)
+	}
+
+	if val, ok := d.GetOk("priority"); ok {
+		newRecord.Priority = val.(int)
 	}
 
 	log.Printf("[DEBUG] INWX Record create configuration: %#v", newRecord)
